@@ -1,0 +1,5 @@
+.vscode/
+
+Make/*
+!Make/files
+!Make/options

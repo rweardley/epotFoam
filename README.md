@@ -1,0 +1,21 @@
+# epotFoam
+
+OpenFOAM electric potential formulation MHD solver.
+
+This solver was obtained from [1], and updated to work in OpenFOAM-10.
+
+## Build instructions
+
+'''
+cd $WM_PROJECT_USER_DIR
+mkdir -p applications/solvers/electromagnetics/epotFoam
+cd applications/solvers/electromagnetics/epotFoam
+git clone <link here>
+'''
+Then to compile the solver
+'''
+wmake
+'''
+
+[1] Tassone, A.: Magnetic induction and electric potential solvers for incompressible MHD flows. In Proceedings of CFD with OpenSource Software, 2016, Edited by Nilsson H. http://dx.doi.org/10.17196/OS_CFD#YEAR_2016)
+
