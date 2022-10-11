@@ -18,4 +18,4 @@ Then to compile the solver
 wmake
 ```
 
-[1] Tassone, A.: Magnetic induction and electric potential solvers for incompressible MHD flows. In Proceedings of CFD with OpenSource Software, 2016, Edited by Nilsson H. http://dx.doi.org/10.17196/OS_CFD#YEAR_2016)
+[1] Tassone, A.: Magnetic induction and electric potential solvers for incompressible MHD flows. In Proceedings of CFD with OpenSource Software, 2016, Edited by Nilsson H. http://dx.doi.org/10.17196/OS_CFD#YEAR_2016
