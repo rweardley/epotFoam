@@ -35,6 +35,7 @@ Description
 
 #include "fvCFD.H"
 #include "pisoControl.H"
+#include "fvModels.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -51,6 +52,12 @@ int main(int argc, char *argv[])
 
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+//    #include "readTimeControls.H"
+
+    #include "CourantNo.H"
+    #include "createTimeControls.H"
+    #include "setInitialDeltaT.H"
+
     Info<< "\nStarting time loop\n" << endl;
 
     // Lorentz force term initialization 
@@ -61,6 +68,7 @@ int main(int argc, char *argv[])
         Info<< "Time = " << runTime.userTimeName() << nl << endl;
 
         #include "CourantNo.H"
+	#include "setDeltaT.H"
 
         // Momentum predictor
 
