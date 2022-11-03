@@ -2,7 +2,7 @@
 
 OpenFOAM electric potential formulation MHD solver.
 
-This solver was obtained from [1], and updated to work in OpenFOAM-10.
+This solver was obtained from [1] under CC-BY-NC-SA, and updated to work in OpenFOAM-10.
 
 ## Build instructions
 
