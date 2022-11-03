@@ -12,20 +12,39 @@ IOdictionary physicalProperties
     )
 );
 
-Info<< "Reading electromagneticProperties\n" << endl;
+//Info<< "Reading electromagneticProperties\n" << endl;
 
 //Additional dictionary for magnetic field definition
-IOdictionary electromagneticProperties
+//IOdictionary electromagneticProperties
+//(
+//    IOobject
+//    (
+//        "electromagneticProperties",
+//        runTime.constant(),
+//        mesh,
+//        IOobject::MUST_READ_IF_MODIFIED,
+//        IOobject::NO_WRITE
+//    )
+//);
+
+// Nonuniform magnetic field field
+Info<< "Reading field B0\n" << endl;
+volVectorField B0
 (
     IOobject
     (
-        "electromagneticProperties",
-        runTime.constant(),
+        "B0",
+        runTime.timeName(),
+        //runTime.constant(),
         mesh,
-        IOobject::MUST_READ_IF_MODIFIED,
+        //IOobject::MUST_READ,
+	IOobject::MUST_READ_IF_MODIFIED,
+        //IOobject::AUTO_WRITE
         IOobject::NO_WRITE
-    )
+    ),
+    mesh
 );
+
 
 // Kinematic viscosity
 dimensionedScalar nu
@@ -52,12 +71,12 @@ dimensionedScalar sigma
 );
 
 //Magnetic field
-dimensionedVector B0
-(
-    "B0",
-    dimensionSet(1, 0, -2, 0, 0, -1, 0),
-    electromagneticProperties.lookup("B0")
-);
+//dimensionedVector B0
+//(
+//    "B0",
+//    dimensionSet(1, 0, -2, 0, 0, -1, 0),
+//    electromagneticProperties.lookup("B0")
+//);
 
 //Pressure field
 Info<< "Reading field p\n" << endl;
